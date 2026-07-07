@@ -215,7 +215,7 @@
   footer .social-badge{ display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; min-width:20px; border-radius:50%; background:#f0cf85; color:#1b1106; font-family:'Cinzel',serif; font-size:9px; font-weight:700; flex-shrink:0; line-height:1; }
   footer .social-row{ display:flex; gap:24px; justify-content:center; flex-wrap:wrap; }
   footer .legal{ margin-top:18px; font-size:13px; color:var(--gold-dim); }
-  /* ---------- talleres ---------- */
+    /* ---------- talleres ---------- */
   .talleres-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
   @media (max-width:860px){ .talleres-grid{ grid-template-columns:1fr; } }
 
@@ -227,8 +227,9 @@
   }
   .taller-card:hover{ transform:translateY(-4px); border-color:var(--gold); }
 
-  .taller-img-wrap{ position:relative; width:100%; aspect-ratio:4/5; overflow:hidden; }
-  .taller-img-wrap img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .taller-img-wrap{ position:relative; width:100%; height:360px; overflow:hidden; background:var(--violet-deep); display:flex; align-items:center; justify-content:center; border-bottom:1px solid var(--line); }
+  .taller-img-wrap img{ width:100%; height:100%; object-fit:contain; display:block; }
+  @media (max-width:860px){ .taller-img-wrap{ height:420px; } }
 
   .taller-badge{
     position:absolute; top:14px; left:14px; font-family:'Cinzel',serif;
@@ -526,9 +527,14 @@
 
   <section class="final container">
     <p class="eyebrow">¿Lista o listo para empezar?</p>
-    <h2>Tu momento es <span class="accent">ahora</span></h2>
+    <h2>Tu momento es <span hora</span></h2>
     <p>Escribime por WhatsApp y arrancamos con tu testeo radiestésico gratuito.</p>
-    <a class="btn" href="https://wa.me/5491130409142?text=Hola%2C%20quie
+    <a class="btn" href="https://wa.me/5491130409142?text=Hola%2C%20quiero%20info%20sobre%20las%20sesiones." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.5 8.5 0 1 1-3.6-6.97M21 11.5L17 10l1-4"/><path d="M4 20l1.3-3.9A8.46 8.46 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3"/></svg>
+      Escribir por WhatsApp
+    </a>
+  </section>
+
   <!-- ================= TALLERES (abajo de todo) ================= -->
   <section class="section container" id="talleres">
     <div class="section-head">
@@ -562,7 +568,7 @@
           <div class="taller-name">Conexión con Ángeles y Arcángeles</div>
           <div class="taller-meta">Miércoles 8 de julio · 19:00 hs (Arg) · Google Meet</div>
           <p class="taller-desc">Taller gratuito y virtual. Aprendé a conectar con los Ángeles de la Abundancia y recibí su guía y protección.</p>
-          <a href="https://chat.whatsapp.com/GwdtjDjys393t29tcQUUME" class="btn taller-cta" target="_blank" rel="noopener">Unite al grupo y reservá tu lugar 🔮</a>
+          <a href="https://chat.whatsapp.com/HdaTFptXRieF3Z6WQ1io11" class="btn taller-cta" target="_blank" rel="noopener">Unite al grupo y reservá tu lugar 🔮</a>
         </div>
       </div>
 

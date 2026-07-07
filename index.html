@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vidas Pasadas &amp; Tarot — Limpieza energética, tarot y vidas pasadas</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Allura&display=swap');
 
@@ -214,6 +215,36 @@
   footer .social-badge{ display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; min-width:20px; border-radius:50%; background:#f0cf85; color:#1b1106; font-family:'Cinzel',serif; font-size:9px; font-weight:700; flex-shrink:0; line-height:1; }
   footer .social-row{ display:flex; gap:24px; justify-content:center; flex-wrap:wrap; }
   footer .legal{ margin-top:18px; font-size:13px; color:var(--gold-dim); }
+
+  /* ---------- talleres ---------- */
+  .talleres-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+  @media (max-width:860px){ .talleres-grid{ grid-template-columns:1fr; } }
+
+  .taller-card{
+    background:linear-gradient(180deg, var(--violet-light) 0%, var(--violet-deep) 100%);
+    border:1px solid var(--line); border-radius:16px; overflow:hidden;
+    display:flex; flex-direction:column;
+    transition:transform .25s ease, border-color .25s ease;
+  }
+  .taller-card:hover{ transform:translateY(-4px); border-color:var(--gold); }
+
+  .taller-img-wrap{ position:relative; width:100%; aspect-ratio:4/5; overflow:hidden; }
+  .taller-img-wrap img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+  .taller-badge{
+    position:absolute; top:14px; left:14px; font-family:'Cinzel',serif;
+    font-size:10.5px; letter-spacing:1.5px; text-transform:uppercase; font-weight:600;
+    padding:6px 12px; border-radius:20px; backdrop-filter:blur(4px);
+  }
+  .badge-pasado{ background:rgba(184,160,224,.28); color:var(--cream); border:1px solid rgba(244,234,217,.4); }
+  .badge-proximo{ background:var(--gold-bright); color:#1b1106; box-shadow:0 0 14px rgba(240,207,133,.6); }
+  .badge-proximamente{ background:rgba(255,255,255,.08); color:var(--gold-bright); border:1px dashed var(--gold); }
+
+  .taller-body{ padding:22px 22px 24px; display:flex; flex-direction:column; flex-grow:1; }
+  .taller-name{ font-family:'Cinzel',serif; font-size:19px; font-weight:600; color:var(--gold-bright); margin:0 0 8px; line-height:1.3; }
+  .taller-meta{ font-size:13px; color:var(--gold-dim); margin-bottom:10px; letter-spacing:.02em; }
+  .taller-desc{ font-size:16px; line-height:1.55; color:var(--cream-dim); flex-grow:1; margin:0; }
+  .taller-cta{ margin-top:16px; text-align:center; }
 </style>
 </head>
 <body>
@@ -340,246 +371,4 @@
             <p class="cat-eyebrow">Vidas pasadas</p>
             <p class="cat-title">Vidas pasadas</p>
           </span>
-          <svg class="cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5l14 14M19 5L5 19"/></svg>
-        </button>
-        <div class="cat-panel">
-          <div class="cat-panel-inner">
-            <p class="cat-intro">Tus encarnaciones anteriores guardan talentos, vínculos y respuestas que tu presente está esperando.</p>
-
-            <div class="svc"><h4>Lectura de Vidas Pasadas</h4><p>Recorré tus encarnaciones para identificar talentos ocultos y disolver promesas que te atan a la escasez. Recibís todo en audios de WhatsApp.</p></div>
-            <div class="svc"><h4>Lectura de Vínculo en Vidas Pasadas</h4><p>Elegí hasta 3 vínculos para comprender su origen y propósito en tu vida actual.</p></div>
-
-            <a class="btn cat-cta" href="https://wa.me/5491130409142?text=Hola%2C%20quiero%20info%20sobre%20Vidas%20pasadas." target="_blank" rel="noopener">Reservar esta sesión</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Categoría: Lecturas de Tarot -->
-      <div class="cat">
-        <button class="cat-head" aria-expanded="false">
-          <span class="cat-icon">
-            <svg viewBox="0 0 24 32" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="2" width="20" height="28" rx="2.4"/><path d="M12 11 L13.4 14.3 L17 14.7 L14.3 17 L15 20.6 L12 18.8 L9 20.6 L9.7 17 L7 14.7 L10.6 14.3 Z" fill="currentColor" stroke="none"/></svg>
-          </span>
-          <span class="cat-headline">
-            <p class="cat-eyebrow">Lecturas de tarot</p>
-            <p class="cat-title">Lecturas de Tarot</p>
-          </span>
-          <svg class="cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5l14 14M19 5L5 19"/></svg>
-        </button>
-        <div class="cat-panel">
-          <div class="cat-panel-inner">
-            <p class="cat-intro">Las cartas como espejo: respuestas claras para tomar decisiones con mayor certeza.</p>
-
-            <div class="svc"><h4>Tarot Lectura General</h4><p>Un paneo completo de tu presente: ❤️ amor y familia, 💰 dinero y trabajo, ✨ salud y energías — más un plus de 3 preguntas puntuales que necesites resolver. Dura 1 hora; es importante estar online durante toda la sesión para aprovecharla, y las preguntas se envían hasta 15 minutos antes de que termine. Solo pido nombre y apellido completo, fecha de nacimiento y, si tenés pareja, su nombre. Ningún dato extra.</p></div>
-            <div class="svc"><h4>Lectura de Vínculo</h4><p>Qué siente, qué piensa y qué va a hacer esa persona: respuestas concretas en lugar de incertidumbre.</p></div>
-            <div class="svc"><h4>Lectura de Tarot Vocacional</h4><p>Descubrí qué bloquea tu camino profesional y qué opciones están en sintonía con tu energía.</p></div>
-            <div class="svc"><h4>Lectura de Tarot en Herradura</h4><p>Un asunto puntual visto en profundidad —pasado, presente y futuro— más 3 preguntas para ir al detalle.</p></div>
-
-            <a class="btn cat-cta" href="https://wa.me/5491130409142?text=Hola%2C%20quiero%20info%20sobre%20Lecturas%20de%20Tarot." target="_blank" rel="noopener">Reservar esta sesión</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Categoría 4 -->
-      <div class="cat">
-        <button class="cat-head" aria-expanded="false">
-          <span class="cat-icon">
-            <svg viewBox="0 0 28 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 C8 8 18 2 26 2 C22 10 18 14 10 18 L4 20 M12 14 L17 11 M9 16 L14 13"/></svg>
-          </span>
-          <span class="cat-headline">
-            <p class="cat-eyebrow">Acompañamiento &amp; bienestar</p>
-            <p class="cat-title">Acompañamiento y bienestar</p>
-          </span>
-          <svg class="cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5l14 14M19 5L5 19"/></svg>
-        </button>
-        <div class="cat-panel">
-          <div class="cat-panel-inner">
-            <p class="cat-intro">Apoyo energético complementario para procesos que también necesitan sostén espiritual.</p>
-
-            <div class="svc"><h4>Apoyo para Personas en Duelo</h4><p>Trabajo con la vibración de las letras hebreas para liberar la angustia que el tiempo no termina de borrar. Es un apoyo complementario: no reemplaza el acompañamiento psicológico.</p></div>
-            <div class="svc"><h4>Apoyo Energético para Sanación de Adicciones</h4><p>Sostén espiritual para tu proceso de recuperación, en conjunto con tu tratamiento profesional.</p></div>
-            <div class="svc"><h4>Desbloqueo Energético para Estudiantes</h4><p>Liberá la mente en blanco y la ansiedad ante los exámenes limpiando los chakras superiores.</p></div>
-
-            <a class="btn cat-cta" href="https://wa.me/5491130409142?text=Hola%2C%20quiero%20info%20sobre%20Acompa%C3%B1amiento%20y%20bienestar." target="_blank" rel="noopener">Reservar esta sesión</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Categoría: Para mascotas -->
-      <div class="cat">
-        <button class="cat-head" aria-expanded="false">
-          <span class="cat-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="7" cy="7.5" r="2.1"/><circle cx="17" cy="7.5" r="2.1"/><circle cx="4.3" cy="13" r="1.8"/><circle cx="19.7" cy="13" r="1.8"/><path d="M12 12.3c-3.6 0-6.4 2.7-6.4 5.6 0 1.3 1.1 2 2.4 1.5L12 17.8l4-1.6c1.3-.5 2.4.2 2.4 1.5 0 2.9-2.8 5.6-6.4 5.6z"/></svg>
-          </span>
-          <span class="cat-headline">
-            <p class="cat-eyebrow">Para mascotas</p>
-            <p class="cat-title">Para mascotas</p>
-          </span>
-          <svg class="cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5l14 14M19 5L5 19"/></svg>
-        </button>
-        <div class="cat-panel">
-          <div class="cat-panel-inner">
-            <p class="cat-intro">Tu compañero también tiene energía, emociones y un alma que merece ser escuchada.</p>
-
-            <div class="svc"><h4>Limpieza Energética con Péndulo Hebreo para Mascotas</h4><p>Limpiá el campo energético de tu compañero animal con la vibración del péndulo hebreo.</p></div>
-            <div class="svc"><h4>Canalización para Mascotas</h4><p>Un puente de comunicación alma a alma para entender qué te quiere decir tu compañero.</p></div>
-            <div class="svc"><h4>Mediumnidad para Mascotas</h4><p>Un canal para recibir, con respeto y amor, un último mensaje de las mascotas que ya partieron.</p></div>
-
-            <a class="btn cat-cta" href="https://wa.me/5491130409142?text=Hola%2C%20quiero%20info%20sobre%20sesiones%20Para%20mascotas." target="_blank" rel="noopener">Reservar esta sesión</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="container">
-    <div class="divider"><span class="rule"></span><svg viewBox="0 0 30 16"><path d="M9 8a3.7 3.7 0 1 0 0 .04M9 8a3.7 3.7 0 1 1 0 .04M9 8c3-5 9-5 12 0c-3 5-9 5-12 0"/></svg><span class="rule"></span></div>
-  </div>
-
-  <section class="section container">
-    <div class="section-head">
-      <p class="eyebrow">Por qué trabajar conmigo</p>
-      <h2>Acompañamiento real, a tu ritmo</h2>
-    </div>
-    <div class="trust">
-      <div class="trust-item">
-        <svg class="ti-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v5l3.2 3.2"/></svg>
-        <h4>Sesiones 100% remotas</h4>
-        <p>Recibís todo en audios de WhatsApp, con la misma efectividad que una sesión presencial.</p>
-      </div>
-      <div class="trust-item">
-        <svg class="ti-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.4-9.5-9C.5 8 2 4 6 4c2.3 0 4 1.4 6 4 2-2.6 3.7-4 6-4 4 0 5.5 4 3.5 8-2.5 4.6-9.5 9-9.5 9z"/></svg>
-        <h4>Diagnóstico antes de cobrar</h4>
-        <p>El testeo radiestésico gratuito define qué necesitás antes de coordinar cualquier pago.</p>
-      </div>
-      <div class="trust-item">
-        <svg class="ti-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg>
-        <h4>Apoyo, no reemplazo</h4>
-        <p>Las sesiones de duelo y adicciones son complementarias: nunca sustituyen a un profesional de la salud.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="container">
-    <div class="divider"><span class="rule"></span><svg viewBox="0 0 30 16"><path d="M9 8a3.7 3.7 0 1 0 0 .04M9 8a3.7 3.7 0 1 1 0 .04M9 8c3-5 9-5 12 0c-3 5-9 5-12 0"/></svg><span class="rule"></span></div>
-  </div>
-
-  <section class="section container" id="faq">
-    <div class="section-head">
-      <p class="eyebrow">Antes de escribir</p>
-      <h2>Preguntas frecuentes</h2>
-    </div>
-    <div class="faq">
-      <div class="faq-item">
-        <button class="faq-q"><span>¿Las sesiones son presenciales?</span><span class="plus">+</span></button>
-        <div class="faq-a"><p>No, todas se realizan a distancia —por audios de WhatsApp— y llegan con la misma potencia y efectividad que una sesión presencial.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>¿Esto reemplaza un tratamiento psicológico o médico?</span><span class="plus">+</span></button>
-        <div class="faq-a"><p>No. Es un apoyo complementario. Las sesiones de duelo, adicciones y similares trabajan junto a tu profesional de salud, nunca en su lugar.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>¿Cómo sé qué sesión necesito?</span><span class="plus">+</span></button>
-        <div class="faq-a"><p>Empezá con el testeo radiestésico gratuito: con eso identificamos bloqueos y energías, y de ahí surge la sesión más indicada para tu caso.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>¿Cómo reservo y pago?</span><span class="plus">+</span></button>
-        <div class="faq-a"><p>Todo se coordina directo por WhatsApp: ahí te cuento la modalidad, la duración y el valor exacto de tu sesión.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span>¿Cuánto dura una sesión?</span><span class="plus">+</span></button>
-        <div class="faq-a"><p>Depende del servicio: hay diagnósticos breves y lecturas más profundas de 40 a 60 minutos aproximadamente.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="final container">
-    <p class="eyebrow">¿Lista o listo para empezar?</p>
-    <h2>Tu momento es <span class="accent">ahora</span></h2>
-    <p>Escribime por WhatsApp y arrancamos con tu testeo radiestésico gratuito.</p>
-    <a class="btn" href="https://wa.me/5491130409142?text=Hola%2C%20quiero%20info%20sobre%20las%20sesiones." target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.5 8.5 0 1 1-3.6-6.97M21 11.5L17 10l1-4"/><path d="M4 20l1.3-3.9A8.46 8.46 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3"/></svg>
-      Escribir por WhatsApp
-    </a>
-  </section>
-
-  <footer>
-    <p class="f-brand">VIDAS PASADAS &amp; TAROT</p>
-    <div class="social-row">
-      <a class="ig" href="https://www.instagram.com/vidaspasadasytarot?igsh=MXR1aXhyenN0NHd2OQ==" target="_blank" rel="noopener">
-        <span class="social-badge">IG</span>
-        @vidaspasadasytarot
-      </a>
-      <a class="ig" href="https://www.facebook.com/groups/VidasPasadasyTarot/?ref=share" target="_blank" rel="noopener">
-        <span class="social-badge">FB</span>
-        Referencias y comentarios
-      </a>
-      <a class="ig" href="https://www.tiktok.com/@vidaspasadasytarot?_r=1&amp;_t=ZS-97R7eQDg6HV" target="_blank" rel="noopener">
-        <span class="social-badge">TT</span>
-        @vidaspasadasytarot
-      </a>
-    </div>
-    <p class="legal">Las sesiones energéticas son un acompañamiento espiritual y no sustituyen diagnóstico ni tratamiento médico o psicológico.</p>
-  </footer>
-
-</div>
-
-<script>
-  // starfield
-  (function(){
-    var c = document.getElementById('stars');
-    var n = window.innerWidth < 600 ? 45 : 75;
-    for(var i=0;i<n;i++){
-      var s = document.createElement('div');
-      s.className='star';
-      s.style.top = Math.random()*100+'%';
-      s.style.left = Math.random()*100+'%';
-      var size = (Math.random()*2+1).toFixed(1);
-      s.style.width = size+'px';
-      s.style.height = size+'px';
-      s.style.animationDelay = (Math.random()*4).toFixed(2)+'s';
-      s.style.animationDuration = (3+Math.random()*3).toFixed(2)+'s';
-      c.appendChild(s);
-    }
-  })();
-
-  // sticky nav
-  window.addEventListener('scroll', function(){
-    document.getElementById('nav').classList.toggle('solid', window.scrollY > 40);
-  });
-
-  // accordion categories
-  document.querySelectorAll('.cat-head').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var cat = btn.closest('.cat');
-      var panel = cat.querySelector('.cat-panel');
-      var isOpen = cat.classList.contains('open');
-      document.querySelectorAll('.cat.open').forEach(function(o){
-        if(o!==cat){ o.classList.remove('open'); o.querySelector('.cat-panel').style.maxHeight=null; o.querySelector('.cat-head').setAttribute('aria-expanded','false'); }
-      });
-      if(isOpen){
-        cat.classList.remove('open'); panel.style.maxHeight=null; btn.setAttribute('aria-expanded','false');
-      } else {
-        cat.classList.add('open'); panel.style.maxHeight = panel.scrollHeight+'px'; btn.setAttribute('aria-expanded','true');
-      }
-    });
-  });
-
-  // faq accordion
-  document.querySelectorAll('.faq-q').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var item = btn.closest('.faq-item');
-      var ans = item.querySelector('.faq-a');
-      var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(function(o){
-        if(o!==item){ o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight=null; }
-      });
-      if(isOpen){ item.classList.remove('open'); ans.style.maxHeight=null; }
-      else { item.classList.add('open'); ans.style.maxHeight = ans.scrollHeight+'px'; }
-    });
-  });
-</script>
-
-</body>
-</html>
+          <svg class="cat-chevron" viewBox="0 0 24 24" fill="none" stroke
